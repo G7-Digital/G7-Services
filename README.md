@@ -1,1 +1,1 @@
-# Projeto Integrador do Curso de Dsenvolvimento Web Full Stack da Digital House
+ Projeto Integrador do Curso de Desenvolvimento Web Full Stack da Digital House
