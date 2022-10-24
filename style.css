@@ -1,8 +1,588 @@
 :root{
     --primary-color: #273A73;
-    --secund-color: #F26457;
+    --second-color: #F26457;
     --bege-color: #f2E8D5;
+    --gray-color: #615f5f;
+    --grayligth-color: rgba(240, 231, 231, 0.808);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+  }
+
+body {
+    width: 100%;
+   }
+
+header {
+    width: 100%;
+    height: 4rem;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--grayligth-color);
     
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,700&display=swap');
+header nav ul{
+   display: flex;
+   list-style: none;
+}
+
+.Logo-G7 {
+   height: 6rem;
+}
+
+ .icone-H {
+    height: 2rem;
+    margin: .3rem;
+    opacity: .8;
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    background-color: var(--primary-color);
+    color: var(--bege-color);
+}
+
+.banner > div{
+    width: 100%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.banner div img{
+   width:33.33%;  
+} 
+
+.banner div .banner-img{
+    width: 100%;
+    display: flex;
+    flex-wrap: row nowrap;
+    justify-content:center;
+    align-items:stretch;
+}
+
+main .banner h3{
+text-align: center;
+margin: 1rem;
+}
+
+main .banner span {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.buscar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.buscar form {
+    max-width: 19rem;
+    height: 2.8rem;
+    padding-left: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:flex-end;
+    align-items:center; 
+    border: solid .2rem var(--primary-color);
+    margin: 0 .2rem;
+}
+
+.buscar input {
+    width: 20rem;
+    height: 2.4rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+.buscar button {
+    width: 6rem ;
+    height: 2.4rem;
+    padding: .7rem;
+    border-radius: .3rem;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    color: var(--primary-color)
+    
+}
+
+.buscar button img {
+    height: 1.5rem;
+}
+
+
+.categorias ul{
+    width:100%;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    background-color: white;
+}
+
+.categorias img{
+    width: 18rem;
+    height: 14rem;
+    opacity: 0.8;
+    border-radius: .4rem;
+    padding-bottom: .5rem;
+}
+
+.categorias a {
+    border-top: solid .5rem;
+    border-right: solid .5rem;
+    border-radius: .8rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    padding-bottom: 1rem ;
+    max-width: 20rem;
+}
+
+.contratar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color)
+}
+
+.passos-contratar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    gap: 2rem;
+}
+
+.passos-contratar div { 
+    width: 18rem;
+    height: 18rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1.5rem;
+    border: solid .5rem var(--primary-color);
+    border-radius: .8rem;
+    padding-top: 4px;
+    
+}
+
+.passos-contratar div img {
+    width: 12rem;
+    height: 12rem;
+    margin-top: .5rem;
+    opacity: .7;
+}
+
+.cadastro-prestador {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size:1rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.cadastro-prestador form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    gap:.8rem;
+}
+
+.cadastro-prestador form div{
+    display: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-prestador form input {
+    font-size: 1rem; 
+    border-radius: .5rem; 
+    padding: .5rem;
+}
+
+.cadastro-prestador form #btn-cadastre {
+    font-size: 1rem;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+}
+
+.passos-prestador {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
+     align-items: center;
+     font-size: 1rem;
+     margin-bottom: 2rem;
+     gap: 2rem;
+    
+}
+
+.passos-prestador div {
+    width: 18rem;
+    height: 18rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border: solid .5rem var(--primary-color);
+    border-radius: 1rem;
+}
+
+.passos-prestador div img {
+    width: 12rem;
+    height: 12rem;
+    margin-top: 1rem;
+    opacity: .7;
+}
+
+.frase-f {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content:center;
+     align-items: center;
+     font-size: 2rem;
+     text-align: center;
+     color: rgb(71, 69, 69);
+     gap: 5rem;
+     margin-bottom: 2rem;
+}
+
+.frase-f img{
+    width: 12rem;
+    height: 12rem;
+    opacity: .7;
+}
+
+footer {
+    height: 4rem;
+    padding: 0 .5rem;
+    font-size: .8rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items:center;
+    background-color: var(--grayligth-color);
+    color: var(--gray-color) ;
+}
+
+footer  div  {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: .8rem;
+    gap: 1rem;
+}
+
+footer div ul{
+    display: none;
+}
+
+footer .redes-sociais {
+    display:flex;
+    flex-flow: row nowrap;
+    gap: .5rem;
+    list-style: none;
+}
+
+.redes-sociais li a img {
+   max-width: 2rem;
+}
+
+@media (min-width:426px){
+    header {
+        padding: 0 4rem;
+    }
+
+    header #logo-G7 {
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+
+    .icone-H {
+        height: 2.5rem;
+        margin: .5rem;
+        opacity: .4;
+    }
+
+    .buscar form {
+        max-width: 30rem;
+    }
+
+    footer{
+      padding: 0 1rem;
+    }
+
+    footer div ul{
+        display: flex;
+        gap: .5rem;
+        list-style: none;
+    }
+
+    .redes-sociais{
+        display: flex;
+        list-style: none;
+        gap: .5rem;
+        }
+    
+
+    .redes-sociais  li a img {
+        min-width: 2rem;
+    }
+}
+
+@media (min-width: 1023px) {    
+    .buscar form {
+        min-width: 40rem;
+        justify-content: space-between;
+    }
+
+    .categorias ul{
+        gap: 5rem;
+    }
+
+    .categorias img{
+        width: 19.6rem;
+        height: 15rem;
+        padding-bottom: 1rem;
+    }
+    
+    .categorias a{
+        width: 22rem;
+        height: 18rem;
+        font-size: 1.4rem;
+    }
+
+    .contratar h2{
+        font-size: 2rem;
+    }
+
+    .cadastro-prestador h2{
+        font-size: 2rem;
+    }
+
+    .frase-f img{
+        width: 16rem;
+        height: 16rem;
+        opacity: .7;
+    }
+}
+
+@media (min-width:1439px) {
+    .icone-H {
+        height: 3rem;
+    }
+
+    .banner {
+        width: 100%;
+    }
+
+    .banner h3 {
+        font-size: 2rem;
+    }
+
+    .banner span {
+        font-size: 1.8rem;
+    }
+    .categorias ul {
+       gap: 1rem;
+    }
+
+    .passos-contratar{
+        gap: 08rem;
+    }
+
+    .passos-prestador{
+        gap: 8rem;
+    }
+
+    .redes-sociais li a img {
+        min-width: 3rem;
+        }
+}
+
+@media screen and (min-width: 2559px) {
+    header {
+        height: 8rem;
+    }
+
+    .Logo-G7{
+        height: 10rem;
+    }
+
+    .icone-H {
+        height: 5rem;
+    }
+    
+    .banner {
+        width: 90%;
+        position: relative;
+        left: 8rem;
+    }
+
+    main .banner h3{
+        font-size: 4rem;
+    }
+    main .banner span {
+        font-size: 2rem;
+    }
+
+    .buscar form {
+        min-width: 60rem;
+        justify-content: space-between;
+    }
+
+    .buscar input {
+        font-size: 1.2rem;
+    }
+
+    .buscar button{
+        width: 10rem;
+        height: 2.4rem;
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+
+    .categorias{
+        width: 90%;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin: 0 8rem;
+        gap:12rem;
+    }
+    
+    .categorias img{
+        min-width: 25.6rem;
+        min-height: 20rem;
+        padding-bottom: 1rem;
+    }
+    
+    .categorias a {
+        min-width: 26rem;
+        height: 24rem;
+        font-size: 2.5rem;
+    }
+
+    .contratar h2 {
+        font-size: 4rem;
+    }
+
+    .cadastro-prestador h2{
+        font-size: 4rem;
+    }
+    
+    .cadastro-prestador label{
+        font-size: 2rem;
+    }
+
+    .cadastro-prestador button{
+        font-size: 2rem;
+    }
+
+    .passos-contratar div{
+        width: 25rem;
+        height: 25rem;
+        font-size: 4rem;
+        
+    }
+    .passos-contratar div h4{
+        font-size: 1.4rem;
+        margin: 2rem;
+    }
+
+    .passos-contratar div img{
+        min-width: 12rem;
+        min-height: 12rem;
+    }
+
+    .passos-prestador div{
+        width: 25rem;
+        height: 25rem;
+        font-size: 4rem;
+    }
+
+    .passos-prestador div h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    }
+
+    .passos-prestador div img {
+        min-width: 12rem;
+        min-height: 12rem;
+    }
+
+    .frase-f {
+        font-size: 4rem;
+    }
+
+    .frase-f img{
+        min-width: 19rem;
+        min-height: 19rem;
+        opacity: .7;
+    }
+
+    footer {
+        height: 8rem;
+        font-size: 4rem;
+    }
+
+    footer > div {
+        font-size: 1.2rem;
+        gap: 2rem;
+    }
+
+    .redes-sociais li a img{
+        min-width: 5rem;
+    }
+}
+
+
+
+
