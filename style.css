@@ -1,10 +1,9 @@
-:root{
+:root {
     --primary-color: #273A73;
     --second-color: #F26457;
     --bege-color: #f2E8D5;
     --gray-color: #615f5f;
     --grayligth-color: rgba(240, 231, 231, 0.808);
-
 }
 
 * {
@@ -12,11 +11,11 @@
     padding: 0;
     font-family: "Ubuntu", sans-serif;
     box-sizing: border-box;
-  }
+}
 
 body {
     width: 100%;
-   }
+}
 
 header {
     width: 100%;
@@ -27,25 +26,32 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: var(--grayligth-color);
-    
 }
 
-header nav ul{
+header nav ul {
    display: flex;
    list-style: none;
+}
+header nav img:hover {
+    position: relative;
+    left: 2px;
+    bottom: 2px;
+    box-shadow: 2px 2px 2px var(--gray-color);
+    border-radius: 100%;
+    opacity: .3;
 }
 
 .Logo-G7 {
    height: 6rem;
 }
 
- .icone-H {
+.icone-H {
     height: 2rem;
     margin: .3rem;
-    opacity: .8;
+    opacity: .5;
 }
 
-.banner{
+.banner {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -58,7 +64,7 @@ header nav ul{
     color: var(--bege-color);
 }
 
-.banner > div{
+.banner > div {
     width: 100%;
     display:flex;
     flex-flow: column nowrap;
@@ -66,11 +72,11 @@ header nav ul{
     align-items: center;
 }
 
-.banner div img{
+.banner div img {
    width:33.33%;  
 } 
 
-.banner div .banner-img{
+.banner div .banner-img {
     width: 100%;
     display: flex;
     flex-wrap: row nowrap;
@@ -78,7 +84,7 @@ header nav ul{
     align-items:stretch;
 }
 
-main .banner h3{
+main .banner h3 {
 text-align: center;
 margin: 1rem;
 }
@@ -106,15 +112,19 @@ main .banner span {
     flex-flow: row nowrap;
     justify-content:flex-end;
     align-items:center; 
-    border: solid .2rem var(--primary-color);
+    border: solid 2px var(--primary-color);
     margin: 0 .2rem;
 }
 
 .buscar input {
-    width: 20rem;
+    width: 100%;
     height: 2.4rem;
-    border-radius: .5rem;
+    border-radius: .5rem; 
     border: none;
+}
+
+.buscar input:focus {
+    outline: none;
 }
 
 .buscar button {
@@ -127,8 +137,7 @@ main .banner span {
     align-items: center;
     justify-content: space-between;
     border: none;
-    color: var(--primary-color)
-    
+    color: var(--primary-color);   
 }
 
 .buscar button img {
@@ -138,7 +147,7 @@ main .banner span {
 
 .categorias ul{
     width:100%;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -148,7 +157,7 @@ main .banner span {
     background-color: white;
 }
 
-.categorias img{
+.categorias img {
     width: 18rem;
     height: 14rem;
     opacity: 0.8;
@@ -165,19 +174,20 @@ main .banner span {
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    margin: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
     padding-bottom: 1rem ;
     max-width: 20rem;
+    box-shadow: 5px 5px 5px 5px var(--grayligth-color);
 }
 
 .contratar {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 .passos-contratar {
@@ -197,11 +207,12 @@ main .banner span {
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    color: var(--gray-color);
     padding: 1.5rem;
     border: solid .5rem var(--primary-color);
     border-radius: .8rem;
     padding-top: 4px;
-    
+    box-shadow: 5px 5px 5px 5px var(--grayligth-color);
 }
 
 .passos-contratar div img {
@@ -232,7 +243,7 @@ main .banner span {
     gap:.8rem;
 }
 
-.cadastro-prestador form div{
+.cadastro-prestador form div {
     display: row nowrap;
     justify-content: center;
     align-items: center;
@@ -242,13 +253,19 @@ main .banner span {
     font-size: 1rem; 
     border-radius: .5rem; 
     padding: .5rem;
+    border-color: var(--primary-color);
+    border-style: solid;
 }
 
 .cadastro-prestador form #btn-cadastre {
     font-size: 1rem;
+    color: var(--primary-color);
     width: 8rem;
     height: 2.5rem;
     border-radius: .5rem;
+    border-color: var(--primary-color);
+    border-style: hidden;
+    box-shadow: 2px 2px 2px 2px var(--gray-color);
 }
 
 .passos-prestador {
@@ -271,9 +288,11 @@ main .banner span {
     justify-content: center;
     font-size: 1rem;
     text-align: center;
+    color: var(--gray-color);
     padding: 1rem;
     border: solid .5rem var(--primary-color);
     border-radius: 1rem;
+    box-shadow: 5px 5px 5px 5px var(--grayligth-color);
 }
 
 .passos-prestador div img {
@@ -295,10 +314,11 @@ main .banner span {
      margin-bottom: 2rem;
 }
 
-.frase-f img{
+.frase-f img {
     width: 12rem;
     height: 12rem;
     opacity: .7;
+    border-radius: 30%;
 }
 
 footer {
@@ -310,7 +330,7 @@ footer {
     justify-content:space-between;
     align-items:center;
     background-color: var(--grayligth-color);
-    color: var(--gray-color) ;
+    color: var(--gray-color);
 }
 
 footer  div  {
@@ -321,7 +341,7 @@ footer  div  {
     gap: 1rem;
 }
 
-footer div ul{
+footer div ul {
     display: none;
 }
 
@@ -332,16 +352,35 @@ footer .redes-sociais {
     list-style: none;
 }
 
-.redes-sociais li a img {
+.redes-sociais img {
    max-width: 2rem;
+   border-radius: 30%;
+   box-shadow: 3px 3px 3px var(--gray-color);
 }
 
-@media (min-width:426px){
+.redes-sociais img:hover {
+    position: relative;
+    left: 2px;
+    bottom: 4px;
+    border-radius: 30%;
+    box-shadow: 3px 3px 3px var(--gray-color);
+}
+
+button:hover {
+    background-color: var(--second-color);
+    color: var(--grayligth-color);
+}
+
+.aviao {
+    animation: aviao 12s infinite linear;
+}
+
+@media (min-width:426px) {
     header {
         padding: 0 4rem;
     }
 
-    header #logo-G7 {
+    .Logo-G7 {
         font-size: 2rem;
         line-height: 5rem;
     }
@@ -349,33 +388,40 @@ footer .redes-sociais {
     .icone-H {
         height: 2.5rem;
         margin: .5rem;
-        opacity: .4;
     }
 
     .buscar form {
         max-width: 30rem;
     }
 
-    footer{
+    footer {
       padding: 0 1rem;
     }
 
-    footer div ul{
+    footer div ul {
         display: flex;
         gap: .5rem;
         list-style: none;
     }
 
-    .redes-sociais{
+    footer > div ul li a{
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    .redes-sociais {
         display: flex;
         list-style: none;
         gap: .5rem;
-        }
+    }
     
 
     .redes-sociais  li a img {
         min-width: 2rem;
     }
+
+    a:link {color: var(--second-color);}
+    a:hover {color: var(--second-color) !important;}
 }
 
 @media (min-width: 1023px) {    
@@ -384,31 +430,31 @@ footer .redes-sociais {
         justify-content: space-between;
     }
 
-    .categorias ul{
+    .categorias ul {
         gap: 5rem;
     }
 
-    .categorias img{
+    .categorias img {
         width: 19.6rem;
         height: 15rem;
         padding-bottom: 1rem;
     }
     
-    .categorias a{
+    .categorias a {
         width: 22rem;
         height: 18rem;
         font-size: 1.4rem;
     }
 
-    .contratar h2{
+    .contratar h2 {
         font-size: 2rem;
     }
 
-    .cadastro-prestador h2{
+    .cadastro-prestador h2 {
         font-size: 2rem;
     }
 
-    .frase-f img{
+    .frase-f img {
         width: 16rem;
         height: 16rem;
         opacity: .7;
@@ -435,17 +481,17 @@ footer .redes-sociais {
        gap: 1rem;
     }
 
-    .passos-contratar{
+    .passos-contratar {
         gap: 08rem;
     }
 
-    .passos-prestador{
+    .passos-prestador {
         gap: 8rem;
     }
 
     .redes-sociais li a img {
         min-width: 3rem;
-        }
+    }
 }
 
 @media screen and (min-width: 2559px) {
@@ -453,7 +499,7 @@ footer .redes-sociais {
         height: 8rem;
     }
 
-    .Logo-G7{
+    .Logo-G7 {
         height: 10rem;
     }
 
@@ -467,7 +513,7 @@ footer .redes-sociais {
         left: 8rem;
     }
 
-    main .banner h3{
+    main .banner h3 {
         font-size: 4rem;
     }
     main .banner span {
@@ -483,14 +529,14 @@ footer .redes-sociais {
         font-size: 1.2rem;
     }
 
-    .buscar button{
+    .buscar button {
         width: 10rem;
         height: 2.4rem;
         font-size: 1.5rem;
         justify-content: center;
     }
 
-    .categorias{
+    .categorias {
         width: 90%;
         font-size: 2rem;
         margin-bottom: 2rem;
@@ -498,7 +544,7 @@ footer .redes-sociais {
         gap:12rem;
     }
     
-    .categorias img{
+    .categorias img {
         min-width: 25.6rem;
         min-height: 20rem;
         padding-bottom: 1rem;
@@ -514,35 +560,35 @@ footer .redes-sociais {
         font-size: 4rem;
     }
 
-    .cadastro-prestador h2{
+    .cadastro-prestador h2 {
         font-size: 4rem;
     }
     
-    .cadastro-prestador label{
+    .cadastro-prestador label {
         font-size: 2rem;
     }
 
-    .cadastro-prestador button{
+    .cadastro-prestador button {
         font-size: 2rem;
     }
 
-    .passos-contratar div{
+    .passos-contratar div {
         width: 25rem;
         height: 25rem;
         font-size: 4rem;
         
     }
-    .passos-contratar div h4{
+    .passos-contratar div h4 {
         font-size: 1.4rem;
         margin: 2rem;
     }
 
-    .passos-contratar div img{
+    .passos-contratar div img {
         min-width: 12rem;
         min-height: 12rem;
     }
 
-    .passos-prestador div{
+    .passos-prestador div {
         width: 25rem;
         height: 25rem;
         font-size: 4rem;
@@ -562,10 +608,9 @@ footer .redes-sociais {
         font-size: 4rem;
     }
 
-    .frase-f img{
+    .frase-f img {
         min-width: 19rem;
         min-height: 19rem;
-        opacity: .7;
     }
 
     footer {
@@ -583,6 +628,6 @@ footer .redes-sociais {
     }
 }
 
-
-
-
+@keyframes aviao {
+    100% {transform: rotate(-360deg);}  
+}
