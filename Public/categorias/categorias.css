@@ -95,11 +95,16 @@ margin-top: 5rem;
 .categorias4 ul {
     list-style: none;
 }
+
 .categorias4 a{
     font-size: 1rem;
     line-height: 2rem;
     text-decoration: none;
     color: var(--primary-color);
+}
+
+.categorias4 a:hover {
+    color: var(--second-color);
 }
 
 .cat-servicos {
@@ -126,13 +131,14 @@ margin-top: 5rem;
     margin-bottom: .8rem;
 }
 
-.categoria li{
+.categoria a {
     width: 14rem;
     height: 16rem;
     display: flex;
     flex-flow: column nowrap;
     font-size: .8rem;
     text-align: center;
+    text-decoration: none;
     color: var(--primary-color);
     align-items: center;
     background-color: #f2E8D5;
@@ -140,6 +146,10 @@ margin-top: 5rem;
     border-radius: 5%;
     margin: .2rem;
     gap: .5rem;
+}
+
+.categoria a:hover{
+    color: var(--second-color);
 }
 
 footer {
@@ -190,4 +200,16 @@ footer .redes-sociais {
 button:hover {
     background-color: var(--second-color);
     color: var(--grayligth-color);
+}
+
+@media (min-width: 426px) {
+    footer div ul {
+        display: flex;
+        gap: .5rem;
+        list-style: none;
+    }
+
+    footer .links a:hover {
+         color: var(--second-color);
+    }
 }
