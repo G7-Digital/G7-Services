@@ -3,7 +3,7 @@
     --second-color: #F26457;
     --bege-color: #f2E8D5;
     --gray-color: #615f5f;
-    --grayligth-color: rgba(240, 231, 231, 0.808);
+    --grayligth-color: rgba(240, 231, 231);
 }
 
 * {
@@ -59,7 +59,6 @@ header nav img:hover {
 }
 
 main {
-    width: 100%;
     display:flex;
     flex-flow:column nowrap;
     justify-content: center;
@@ -71,11 +70,29 @@ main {
 main form {
     display: flex;
     flex-flow: column nowrap;
-    
-
-
+    gap: .5rem;
+    color: var(--primary-color);
+    background-color: var(--grayligth-color);
+    padding: 1rem;
 }
 
+main form input:not(input[type="file"] ){
+    border: solid .15rem var(--primary-color);
+    border-radius: .3rem;
+    height: 2rem; 
+}
+
+main textarea {
+    border: solid .15rem var(--primary-color);
+    border-radius: .3rem;
+}
+
+main form button {
+    line-height: 2rem ;
+    background-color: var(--primary-color);
+    color: var(--bege-color);
+    border-radius: .5rem;
+}
 
 footer {
     width: 100%;
