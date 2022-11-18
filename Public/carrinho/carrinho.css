@@ -52,12 +52,11 @@ header nav img:hover {
     opacity: .5;
 }
 
-main {
-    margin: 5rem 0;
+main * {
 }
 
-main * {
-    border: solid .5px red;
+main {
+    margin: 5rem .5rem;
 }
 
 .carrossel {
@@ -72,44 +71,54 @@ main * {
 .serv-contratados {
     display:flex;
     flex-flow: column wrap;
+    color: var(--primary-color);
+    border-radius: .3rem;
+    gap: .5rem;
+    background-color: var(--grayligth-color);
 }
 
 .grid1 {
+    width: 100%;
     display: flex;
     flex-direction: column;
     grid-area: item1;
+    gap: 1rem;
 }
 
 .cart {
-    background-color: aquamarine;
+    border-radius: .3rem;
+    background-color: var(--second-color);
     display: flex;
     align-items:center;
     gap: 1rem;
-    padding: .1rem;
+    padding: .5rem;
 }
 
 .tit-cart {
-    background-color: blueviolet;
+    
     display: flex;
     justify-content: space-between;
     grid-area: item2;
     font-size: 1.5rem;
+    gap: .8rem;
 }
 
 .tit-cart>:first-child {
-    width: 10rem;
+    width: 9rem;
 }
+
 .tit-cart>:nth-child(3){
     width: 5.5rem;
 }
 
 .serv-quant {
-    background-color: coral;
+   
     display:flex;
     justify-content: space-between;
     align-items:center;
     grid-area: item3;
     padding: .1rem;
+    gap: .5rem;
 }
 
 .serv-quant > div {
@@ -118,13 +127,42 @@ main * {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 10rem;
+    width: 8.5rem;
+    border: solid .1px var(--primary-color);
+    padding: .5rem .1rem;
+    gap: .5rem;
 }
 
 .serv-quant form {
     display: flex;
     flex-flow: column;
-    max-width: 3rem;
+    max-width: 5rem;
+    justify-content: center;
+    gap: .2rem;
+}
+
+.serv-quant form div {
+    display :flex;
+}
+
+.serv-quant .btn {
+    width: 1.5rem;
+    font-weight: bold;
+    border: none;
+    color: var(--bege-color);
+    background-color: #273A73;
+}
+
+.serv-quant #quant {
+    width: 2rem;
+    text-align: center;
+    border: none;
+}
+
+.serv-quant .limpar {
+    color: var(--primary-color);
+    border-radius: .2rem;
+    border: solid 1px var(--primary-color);
 }
 
 .serv-quant > span {
@@ -132,18 +170,39 @@ main * {
     flex-flow: row nowrap;
 }
 
-
 .resumo-pedido {
-    background-color: yellow;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
+    align-items: justify;
+    justify-content: center;
     grid-area: item4;
     font-size: 1rem;
+    color: var(--bege-color);
+    border-radius: .3rem;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+.resumo-pedido h4 {
+    text-align: center;
+    color: var(--second-color);
 }
 
 .resumo-pedido form{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.resumo-pedido form button {
+    min-width: 15rem;
+    margin: .3rem;
+    height: 2rem;
+    border-radius: .2rem;
+    border: solid .1rem var(--primary-color);
+    color: var(--primary-color);
 }
 
 footer {
@@ -201,14 +260,14 @@ footer .redes-sociais {
         'item1 item1 item1 item4'
         'item2 item2 item2 item4'
         'item3 item3 item3 item4';
-        
-        
+        justify-content: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        column-gap: 1rem;
     }
 
-    .serv-quant > div {
-        flex-flow: row nowrap;
-        flex-grow: 1;
-        
+       .resumo-pedido {
+        min-width: 10rem;
     }
 
     footer {
@@ -225,3 +284,21 @@ footer .redes-sociais {
              color: var(--second-color);
         }
 }
+
+@media (min-width: 769px) {
+
+
+    main .serv-contratados {
+        padding: 1rem;
+        max-width: 40rem;
+        margin: 5rem auto;
+        gap: 1rem;
+        
+    }
+
+    main .resumo-pedido > h4 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
