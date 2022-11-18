@@ -3,7 +3,7 @@
     --second-color: #F26457;
     --bege-color: #f2E8D5;
     --gray-color: #615f5f;
-    --grayligth-color: rgba(240, 231, 231, 0.808);
+    --grayligth-color: rgba(240, 231, 231);
 }
 
 * {
@@ -13,9 +13,6 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100%;
-}
 
 header {
     width: 100%;
@@ -336,6 +333,7 @@ footer {
     align-items:center;
     background-color: var(--grayligth-color);
     color: var(--gray-color);
+    
 }
 
 footer  div  {
