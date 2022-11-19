@@ -59,14 +59,91 @@ main {
     margin: 5rem .5rem;
 }
 
+/* css carrossel */
 .carrossel {
-    background-color:firebrick;
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* imagens escondidas */
+  .slides {
+    display: none;
+  }
+
+  .slides img{
+    max-height: 15rem;
+    translate:initial;
+  }
+  
+  /* botões (<) e (>) */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 28%;
+    width: auto;
+    margin-top: 22px;
+    padding: 16px;
+    color: var(--second-color);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Posicionar botão next a direita*/
+  .next {
+    right: 0rem;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color:rgba(240, 231, 231, .8);
+  }
+  
+  /* legenda da imagem */
+  .text {
+    color: var(--second-color);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50px;
     width: 100%;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    text-align: center;
+    text-shadow: var(--bege-color) 1px 1px 1px;
+  }
+  
+  /* bolinhas indicadoras de imagens */
+  .balls {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .balls:hover {
+    background-color: #717171;
+  }
+  
+  /* Animação na transição de imagem */
+  .transicao-img {
+    animation-name: transicao-img;
+    animation-duration: 1s;
+
+  }
+  
+  @keyframes transicao-img {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+ 
 
 .serv-contratados {
     display:flex;
@@ -153,10 +230,11 @@ main {
     background-color: #273A73;
 }
 
-.serv-quant #quant {
+.serv-quant .quant {
     width: 2rem;
     text-align: center;
     border: none;
+    background-color: white;
 }
 
 .serv-quant .limpar {
