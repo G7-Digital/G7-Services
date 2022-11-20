@@ -97,6 +97,93 @@ main .banner span {
     padding: 0 1rem;
 }
 
+main .banner button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: .5rem;
+
+}
+
+.modal {
+    display: none; /* esconde o modal */
+    position: fixed; 
+    z-index: 1; /* modal sobrepõe background */
+    left: 0;
+    top: 0rem;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* abilita scroll barra se necessário */
+    background-color: rgba(58, 50, 50, 0.8);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 80%;
+    position: relative;
+    background-color: var(--second-color);
+    margin: 10rem auto;
+    padding: 0;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 1s
+}
+
+.modal-header  {
+    padding: .5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.modal-body {    
+    color: var(--primary-color);
+    font-weight: bold;
+    border-color:solid 1px #273A73;
+    text-align: center;
+}
+
+.modal-footer {
+    padding: 2rem;
+    color: var(--bege-color);
+    background-color: var(--second-color);
+    text-align: center;
+}
+
+.modal-footer h1 {
+    border:dashed;
+    padding: 1.5rem;
+}
+
+.close {
+    color: var(--primary-color);
+    font-size: 2rem;
+    line-height: 1rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    left: 7rem;
+    top: .5rem
+}
+  
+.close:hover,
+.close:focus {
+    color:var(--bege-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* animação quando modal é chamado */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
 .buscar {
     display: flex;
     flex-flow: row nowrap;
@@ -372,6 +459,7 @@ footer .redes-sociais {
 button:hover {
     background-color: var(--second-color);
     color: var(--grayligth-color);
+    border: none;
 }
 
 .aviao {
@@ -393,6 +481,10 @@ button:hover {
         margin: .5rem;
     }
 
+    .modal-content{
+        max-width: 60%;
+    }
+    
     .buscar form {
         max-width: 30rem;
     }
@@ -428,6 +520,12 @@ button:hover {
 }
 
 @media (min-width: 1023px) {    
+    .close {
+        position: relative;
+        left: 15rem;
+        top: 1.5rem
+    }
+
     .buscar form {
         min-width: 40rem;
         justify-content: space-between;
