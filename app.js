@@ -1,11 +1,11 @@
 // chama o modal
-var modal = document.getElementById("modal-promocoes");
+let modal = document.getElementById("modal-promocoes");
 
 //chama o botão que liga o modal
-var btn = document.getElementById("btn-modal");
+let btn = document.getElementById("btn-modal");
 
 // chama o botão que fecha o modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // função para aprecer o modal
 btn.onclick = function() {
@@ -23,3 +23,17 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+const menuHamburguer = document.querySelector(".icone-menu");
+menuHamburguer.onclick = function hamburgerActive() {
+  let hamburger = document.getElementById("hamburguer");
+  if (hamburger.style.display === "block") {
+    hamburger.style.display = "none";
+  } else {
+    hamburger.style.display = "block";
+  }
+}
+
+
+
