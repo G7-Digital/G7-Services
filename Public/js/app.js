@@ -1,4 +1,5 @@
-// chama o modal
+// JS do Modal Promoções e Cupons
+//chama o modal
 let modal = document.getElementById("modal-promocoes");
 
 //chama o botão que liga o modal
@@ -22,9 +23,10 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+//Menu Hamburgur e Menu Usuário
+//mostra e esconde o menu hamburguer e usuario//
 const menuHamburguer = document.querySelector(".icone-menu");
 menuHamburguer.onclick = function hamburgerActive() {
   let hamburger = document.getElementById("hamburguer");
@@ -35,5 +37,13 @@ menuHamburguer.onclick = function hamburgerActive() {
   }
 }
 
-
+const menuUsuario = document.querySelector(".icone-usuario");
+menuUsuario.onclick = function usuarioActive() {
+  let usuario = document.getElementById("usuario");
+  if (usuario.style.display === "block") {
+    usuario.style.display = "none";
+  } else {
+    usuario.style.display = "block";
+  }
+}
 

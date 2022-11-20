@@ -13,10 +13,6 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100%;
-}
-
 header {
     width: 100%;
     height: 4rem;
@@ -26,31 +22,44 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: var(--grayligth-color);
+    position:fixed;
+    top: 0;
     box-shadow: 1px 3px 3px 3px  rgb(175, 174, 174);
 }
-
-header nav ul {
-   display: flex;
-   list-style: none;
-}
-
-header nav img:hover {
-    position: relative;
-    left: 2px;
-    bottom: 2px;
-    box-shadow: 2px 2px 2px var(--gray-color);
-    border-radius: 100%;
-    opacity: .3;
-}
-
+   
 .Logo-G7 {
-   height: 6rem;
-}
-
+    height: 6rem;
+ }
+ 
 .icone-H {
     height: 2rem;
     margin: .3rem;
     opacity: .5;
+}  
+
+.icones a:hover {
+    opacity: .3;
+}
+
+.menu {
+    width: 100%;
+    display: none;
+}
+.menu a {
+    color:var(--bege-color);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    position: relative;
+    top:4rem;
+    right: 0;
+    background-color: var(--primary-color);
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    color: var(--second-color);
 }
 
 main { 
@@ -58,7 +67,6 @@ main {
     flex-flow: column wrap;
     justify-content:center;
     align-items: center;
-    
 }
 
 main .all-content {
@@ -66,8 +74,9 @@ display: flex;
 flex-flow: row wrap;
 justify-content: center;
 align-items:flex-start;
-margin: 1rem 0;
+margin: 6rem 0;
 gap: .5rem;
+z-index: 10;
 }
 
 main .all-cat {
@@ -213,6 +222,20 @@ button:hover {
 }
 
 @media (min-width: 426px) {
+    header {
+        padding: 0 4rem;
+    }
+
+    .Logo-G7 {
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+
+    .icone-H {
+        height: 2.5rem;
+        margin: .5rem;
+    }
+
     .categorias4 {
         right: 0.5rem;
         bottom: 40rem;
@@ -221,7 +244,7 @@ button:hover {
     .categorias4 {
         position: fixed;
         left: 1rem;
-        top: 5rem;
+        top: 20rem;
         width: 11rem;
         height: 14rem;
         gap: 1.5rem;
@@ -252,14 +275,14 @@ button:hover {
 
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1439px) {
     main .all-cat{
         width: 100%;
         align-items: center;
     }
 }
 
-@media (min-width: 1561px){
+@media (min-width: 2559px){
     main .categorias4 {
         left: 30rem;
     }

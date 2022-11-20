@@ -6,17 +6,11 @@
     --grayligth-color: rgba(240, 231, 231);
 }
 
- * {
+* {
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", sans-serif;
     box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
 }
 
 header {
@@ -31,31 +25,41 @@ header {
     position:fixed;
     top: 0;
     box-shadow: 1px 3px 3px 3px  rgb(175, 174, 174);
-    z-index: 10;
+    z-index: 1;
 }
-
-header nav ul {
-   display: flex;
-   list-style: none;
-}
-
-header nav img:hover {
-    position: relative;
-    left: 2px;
-    bottom: 2px;
-    box-shadow: 2px 2px 2px var(--gray-color);
-    border-radius: 100%;
-    opacity: .3;
-}
-
+   
 .Logo-G7 {
-   height: 6rem;
-}
-
+    height: 6rem;
+ }
+ 
 .icone-H {
     height: 2rem;
     margin: .3rem;
     opacity: .5;
+}  
+
+.icones a:hover {
+    opacity: .3;
+}
+
+.menu {
+    width: 100%;
+    display: none;
+}
+.menu a {
+    color: var(--bege-color);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    position: relative;
+    top:4rem;
+    background-color: var(--primary-color);
+}
+
+.menu a:hover {
+    background-color: var(--bege-color);
+    color: var(--second-color);
 }
 
 main {
@@ -63,7 +67,7 @@ main {
     flex-flow:column nowrap;
     justify-content: center;
     align-items: center;
-    margin: 6rem auto;
+
 }
 
 main form {
@@ -73,6 +77,7 @@ main form {
     color: var(--primary-color);
     background-color: var(--grayligth-color);
     padding: 1rem;
+    margin: 6rem auto;
 }
 
 main form input:not(input[type="file"] ){

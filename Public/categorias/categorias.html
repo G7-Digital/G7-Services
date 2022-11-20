@@ -11,27 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Ubuntu:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/Public/categorias/categorias.css">
+    <script src="/Public/categorias/categorias.js" defer></script>
 
 </head>
 <body>
     <header>
         <img class="Logo-G7" src="/Public/img/Logo-G7.png" alt="Logo-G7">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">
-                        <img class="icone-H" src="/Public/img/18601.png" alt="login e cadastro de usuários">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img class="icone-H" src="/Public/img/menu.png" alt="menu site">
-                    </a>
-                </li>
-            </ul>   
-        </nav>           
+        <div class="icones">
+            <a>
+                <img class="icone-usuario icone-H" src="/Public/img/18601.png" alt="login e cadastro de usuários">
+            </a> 
+            <a>
+                <img class="icone-menu icone-H" src="/Public/img/menu.png" alt="menu site">
+            </a> 
+        </div>       
     </header>
     <main>
+        <div class="menu" id="hamburguer">
+            <a href="/Public/categorias/categorias.html">Categorias</a>
+            <a href="/Public/carrinho/carrinho.html"> Meu Carrinho</a>
+            <a href="/index.html">Voltar para a Home</a>
+        </div> 
+        <div class="menu" id="usuario">
+            <a href="">Meudados</a>
+            <a href="">Meu Pedidos</a>
+            <a href="">Meu Serviços</a>
+            <a href="/Public/adicionar-produtos/add-produto.html">Cadastar Serviços</a>
+            <a href="/index.html">Voltar para a Home</a>
+        </div>
         <section class="all-content">
             <aside class="categorias4">
                 <h4>Categorias</h4>
