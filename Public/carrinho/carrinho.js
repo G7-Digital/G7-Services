@@ -20,19 +20,31 @@ menuUsuario.onclick = function usuarioActive() {
   }
 }
 
-   //window.addEventListener ('load', () => {
+ //botões adicionar e remover item do carinho
    
-    //const btnAdd = document.querySelector(".btn-add");
-    //const quant = document.querySelector(".quant");
-    //const contador = 1
-    
-    //btnAdd.addEventListener ("click", function() {
-    //    contador = contador + 1
-    //    quant.innertext = contador
-    //   console.log(quant)
-    //})
-    //})
-    
+const btnAdd = document.querySelector(".btn-add");
+let quant = document.querySelector(".quant");
+let contador = parseInt(quant.innerText)
+let containerProduto = document.querySelector('.serv-quant')
+let btnRemove = document.querySelector('.btn-remove')
+
+
+btnAdd.addEventListener("click", function(e) {
+  e.preventDefault()
+    contador++
+    quant.innerText = contador
+  })
+  
+btnRemove.addEventListener('click', function (e){
+  e.preventDefault()
+  contador--
+  quant.innerText = contador
+  if (contador <= 0){
+    containerProduto.remove()
+    document.querySelectorAll('.resumo').forEach(div => div.remove())
+  }
+})
+
 let slideIndex = 1;
 showImagens(slideIndex);
 
