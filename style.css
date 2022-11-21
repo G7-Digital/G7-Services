@@ -197,7 +197,7 @@ main .banner button {
 
 .buscar {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     margin-bottom: 2rem;
     padding: 1rem;
@@ -244,6 +244,10 @@ main .banner button {
     height: 1.5rem;
 }
 
+.erro {
+    color: red;
+    padding: .5rem;
+}
 
 .categorias ul{
     width:100%;

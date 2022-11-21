@@ -47,3 +47,30 @@ menuUsuario.onclick = function usuarioActive() {
   }
 }
 
+// valida Input Buscar
+let btnBuscar= document.getElementById("btnBusca");
+let inputBuscar = document.getElementById("txtBusca");
+let formBuscar = document.querySelector(".buscar form");
+let formOut = document;
+
+let avisoBuscar = document.createElement('span');
+avisoBuscar.innerText = "Digite o nome do serviço buscado!";
+avisoBuscar.classList.add('erro');
+
+//ativa o aviso com mouse sobre o botão buscar se input vazio
+//e desativas se preenchido
+btnBuscar.addEventListener('mouseover', function(event){
+  event.preventDefault()
+  if (inputBuscar.value != ""){
+    avisoBuscar.remove()
+  } else {
+    formBuscar.insertAdjacentElement('afterend', avisoBuscar)
+  }
+})
+//zera o value quando clica fora do input
+formOut.addEventListener('click', function(event){
+  avisoBuscar.remove();
+  if(inputBuscar.value.length > 0){
+    inputBuscar.value = ''
+  }
+})
