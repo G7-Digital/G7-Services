@@ -23,7 +23,7 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-};
+}
 
 //Menu Hamburgur e Menu Usuário
 //mostra e esconde o menu hamburguer e usuario//
@@ -51,7 +51,7 @@ menuUsuario.onclick = function usuarioActive() {
 let btnBuscar= document.getElementById("btnBusca");
 let inputBuscar = document.getElementById("txtBusca");
 let formBuscar = document.querySelector(".buscar form");
-let formOut = document;
+const formOut = document;
 
 let avisoBuscar = document.createElement('span');
 avisoBuscar.innerText = "Digite o nome do serviço buscado!";
@@ -72,5 +72,32 @@ formOut.addEventListener('click', function(event){
   avisoBuscar.remove();
   if(inputBuscar.value.length > 0){
     inputBuscar.value = ''
+  }
+})
+
+//Valições nos inptus e-mail e celular
+let email = document.getElementById('email');
+let celular = document.getElementById('telefone');
+
+let btnCadastreSe = document.getElementById('btn-cadastre')
+
+let avisoPreCadastre = document.createElement('span');
+avisoPreCadastre.innerText = "Digite o email e/ou celular";
+avisoPreCadastre.classList.add('erro');
+
+email.addEventListener('change', function(){
+  
+  if (email.value != "" && celular.value != "") {
+    avisoPreCadastre.remove()
+  } else {
+    btnCadastreSe.insertAdjacentElement('afterend', avisoPreCadastre)
+  }
+})
+//zera o value quando clica fora do input
+btnCadastreSe.addEventListener('click', function(event){
+  
+  avisoPreCadastre.remove();
+  if(email.value.length < 3 && celular.value.length < 3) {
+    event.preventDefault()
   }
 })
