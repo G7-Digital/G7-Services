@@ -62,15 +62,8 @@ header {
     color: var(--second-color);
 }
 
-main {
-    display:flex;
-    flex-flow:column nowrap;
-    justify-content: center;
-    align-items: center;
-
-}
-
 main form {
+    max-width: 30rem;
     display: flex;
     flex-flow: column nowrap;
     gap: .5rem;
@@ -84,11 +77,14 @@ main form input:not(input[type="file"] ){
     border: solid .15rem var(--primary-color);
     border-radius: .3rem;
     height: 2rem; 
+    padding-left: 1rem;
 }
 
 main textarea {
     border: solid .15rem var(--primary-color);
     border-radius: .3rem;
+    padding-left: 1rem;
+    line-height: 2rem;
 }
 
 main form button {
@@ -96,6 +92,10 @@ main form button {
     background-color: var(--primary-color);
     color: var(--bege-color);
     border-radius: .5rem;
+}
+
+.erro1 {
+    color: red;
 }
 
 footer {

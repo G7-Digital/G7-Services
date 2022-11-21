@@ -38,28 +38,35 @@
             <a href="/Public/adicionar-produtos/add-produto.html">Cadastar Serviços</a>
             <a href="/index.html">Voltar para a Home</a>
         </div>
-        <form action="/#" method="post">
+        <form class="formulario">
+            <h2>Adicionar Serviços</h2>
+
             <label for="choose-cat">Categoria do serviço: </label>
-            <input list="list-cat" name="choose-cat" id="choose-cat">
+            <input list="list-cat" name="choose-cat" id="choose-cat" placeholder="Escolha uma categoria" required>
+
             <label for="cod-service">Código do serviço: </label>
-            <input type="text" name="name-service" >
+            <input type="text" name="name-service" id="codigo" placeholder="0000" required>
+
             <label for="name-service">Nome do serviço: </label>
-            <input type="text" name="name-service" >
+            <input type="text" name="name-service" id="name-service" placeholder="Digite o nome do serviço" required>
+
             <label for="descricao-service">Descrição do serviço: </label>
-            <textarea name="descricao-serv" id="descricao-serv" rows="5"></textarea>
+            <textarea name="descricao-serv" id="descricao-serv" rows="5" minlength="15" maxlength="300" placeholder="Descreva o serviço prestado" required></textarea>
+
             <label for="add-img">Adicionar imagem: </label>
-            <input type="file" name="add-img" >
+            <input type="file" name="add-img" id="add" required>
+
             <label for="price">Preço: </label>
-            <input type="text" name="price" >
+            <input type="text" name="price" id="price" placeholder="R$ 100,00" required>
+
             <datalist id="list-cat">
                 <option value="serviços para casa">
                 <option value="saúde e beleza">
                 <option value="serviços automotivos">
                 <option value="eventos">
             </datalist>
-            <button type="submit">Enviar</button>
 
-
+            <button class="enviar" type="submit">Enviar</button>
         </form>
     </main>
     <footer>
