@@ -45,6 +45,7 @@ header {
     width: 100%;
     display: none;
 }
+
 .menu a {
     color:var(--bege-color);
     padding: 14px 16px;

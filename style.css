@@ -45,6 +45,7 @@ header {
 .menu {
     display: none;
 }
+
 .menu a {
     width: 100%;
     color:var(--bege-color);

@@ -48,12 +48,11 @@ btnRemove.addEventListener('click', function (e){
 let slideIndex = 1;
 showImagens(slideIndex);
 
-// Next/previous controls
+// Next/previous controles
 function nextImagens(n) {
   showImagens(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showImagens(slideIndex = n);
 }
